@@ -21,6 +21,7 @@ gulp.task('js', () => {
     browserify
         .transform('babelify', { presets: ['env', 'react'] })
         .bundle()
+        .on('error', error => console.log(error))
         .pipe(source('bundle.js'))
         .pipe(gulp.dest('build'));
 });
