@@ -1,9 +1,33 @@
-const gulp = require('gulp');
-const babel = require('gulp-babel');
+var gulp = require('gulp');
+var concat = require('gulp-concat');
+var source = require('vinyl-source-stream');
+var Browserify = require('browserify');
 
-gulp.task('default', () => {
+var sourceFiles = ['./src/css/**/*.css', './src/js/**/*.js'];
+
+gulp.task('css', () => {
     gulp
-        .src('src/app.js')
-        .pipe(babel({ presets: ['env'] }))
+        .src('src/css/**/*.css')
+        .pipe(concat('bundle.css'))
         .pipe(gulp.dest('build'));
+});
+
+gulp.task('js', () => {
+    var browserify = Browserify({
+        entries: './src/index.js',
+        debug: true
+    });
+
+    browserify
+        .transform('babelify', { presets: ['env', 'react'] })
+        .bundle()
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest('build'));
+});
+
+
+gulp.task('default', ['js', 'css']);
+
+gulp.task('watch', () => {
+    gulp.watch(sourceFiles, ['default']);
 });

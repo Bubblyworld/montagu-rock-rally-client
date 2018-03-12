@@ -11,14 +11,19 @@
   ],
   "author": "Guy Paterson-Jones",
   "license": "MIT",
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-router": "^4.2.0"
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.1",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1"
+    "gulp-concat": "^2.6.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
   }
 }
