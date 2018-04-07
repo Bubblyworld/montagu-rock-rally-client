@@ -1,17 +1,31 @@
 import React from 'react';
 
-function cssWrapper(className) {
+// Encapsulates a generic form, which consists of a list of field blocks,
+// followed by a footer typically containing submit and cancel buttons.
+export class Form extends React.Component {
+    render() {
+        return <div className='form'>
+            {this.props.children}
+        </div>;
+    }
+}
+
+function cssWrapper(containerClass, childClass) {
     return class extends React.Component {
+        renderChild(child) {
+            return <div className={childClass}>
+                {child}
+            </div>;
+        }
+
         render() {
-            return <div className={className}>
-                {this.props.children}
+            return <div className={containerClass}>
+                {this.props.children.map(this.renderChild)}
             </div>;
         }
     }
 }
 
-// Encapsulates a generic form, which consists of a list of field blocks,
-// followed by a footer typically containing submit and cancel buttons.
-export var Form = cssWrapper('form');
-export var Block = cssWrapper('form__block');
-export var Footer = cssWrapper('form__footer');
+// The blocks of fields and the footer containing buttons.
+export var Block = cssWrapper('form__block', 'form__field');
+export var Footer = cssWrapper('form__footer', 'form__button');
