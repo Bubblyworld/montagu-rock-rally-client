@@ -1,12 +1,13 @@
 import React from 'react';
 import { Textfit } from 'react-textfit';
 
+import Card from '../../card.js';
 import { DataTable, Row } from '../../data_table.js';
 
 export default class ProfileContent extends React.Component {
     render() {
         return <div className='profile-content'>
-            <div className='profile-card'>
+            <Card>
                 <div className='profile-card__name'>
                     <Textfit mode='single'>
                         <span>Guy Paterson-Jones</span>
@@ -26,7 +27,7 @@ export default class ProfileContent extends React.Component {
                 <div className='profile-card__data-table'>
                     <DataTable/>
                 </div>
-            </div>
+            </Card>
         </div>
     }
 }
