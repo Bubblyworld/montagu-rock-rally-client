@@ -14,9 +14,6 @@ export default class InternalPage extends React.Component {
             <Route path={this.props.match.url + '/profile'} component={ProfileContent}/>
             <Route path={this.props.match.url + '/scoreboard'} component={ScoreboardContent}/>
             <Route path={this.props.match.url + '/send'} component={SendContent}/>
-
-            {/* Testing testing */}
-            <Link to='/'><button>Home</button></Link>
         </div>
     }
 }

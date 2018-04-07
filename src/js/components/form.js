@@ -19,8 +19,15 @@ function cssWrapper(containerClass, childClass) {
         }
 
         render() {
+            var contained;
+            if (Array.isArray(this.props.children)) {
+                contained = this.props.children.map(this.renderChild);
+            } else {
+                contained = this.props.children ? this.renderChild(this.props.children) : null;
+            }
+
             return <div className={containerClass}>
-                {this.props.children.map(this.renderChild)}
+                {contained}
             </div>;
         }
     }
