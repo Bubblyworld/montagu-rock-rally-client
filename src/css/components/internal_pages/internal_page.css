@@ -1,4 +1,4 @@
-.entry-page {
+.internal-page {
     display: flex;
     flex-direction: column;
 
@@ -7,7 +7,7 @@
     background-color: #d9d1cf;
 }
 
-.entry-page__content {
+.internal-page__content {
     display: flex;
     align-items: center;
     justify-content: center;
