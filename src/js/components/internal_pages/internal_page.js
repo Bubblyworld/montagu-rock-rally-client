@@ -11,19 +11,19 @@ export default class InternalPage extends React.Component {
         return <div className='internal-page'>
             <header className='internal-page__header'>
                 <Nav>
-                    <Link to='/profile'>
+                    <Link to='/internal/profile'>
                         <Item>
                             Profile
                         </Item>
                     </Link>
 
-                    <Link to='/scoreboard'>
+                    <Link to='/internal/scoreboard'>
                         <Item>
                                 Scoreboard
                         </Item>
                     </Link>
 
-                    <Link to='/send'>
+                    <Link to='/internal/send'>
                         <Item>
                                 Add Send
                         </Item>
