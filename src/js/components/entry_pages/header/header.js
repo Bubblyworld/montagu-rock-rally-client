@@ -2,8 +2,8 @@ import React from 'react';
 
 export default class Header extends React.Component {
     render() {
-        return <header className='header'>
+        return <div className='header'>
             I'm a header.
-        </header>
+        </div>;
     }
 }

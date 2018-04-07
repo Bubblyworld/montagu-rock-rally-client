@@ -10,13 +10,19 @@ import RegisterContent from './content/register_content.js';
 export default class EntryPage extends React.Component {
     render() {
         return <div className='entry-page'>
-            <Header/>
+            <header className='entry-page__header'>
+                <Header/>
+            </header>
 
-            <Route exact path='/' component={FrontContent}/>
-            <Route path='/login' component={LoginContent}/>
-            <Route path='/register' component={RegisterContent}/>
+            <main className='entry-page__content'>
+                <Route exact path='/' component={FrontContent}/>
+                <Route path='/login' component={LoginContent}/>
+                <Route path='/register' component={RegisterContent}/>
+            </main>
 
-            <Footer/>
-        </div>
+            <footer className='entry-page__footer'>
+                <Footer/>
+            </footer>
+        </div>;
     }
 }

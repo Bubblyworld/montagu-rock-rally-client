@@ -1,0 +1,12 @@
+.field {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.field--40-60 .field__label, .field__label { flex: 40 40 0; }
+.field--40-60 .field__input, .field__input { flex: 60 60 0; }
+
+.field--50-50 .field__label { flex: 50 50 0; }
+.field--50-50 .field__input { flex: 50 50 0; }

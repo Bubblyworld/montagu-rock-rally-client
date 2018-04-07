@@ -1,0 +1,27 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 5px;
+
+    color: #da2d2d;
+    background-color: #272822;
+    box-shadow: -2px 2px 8px 0px #73706f;
+    border-radius: 5px;
+}
+
+.button, .button--normal {
+    height: 50px;
+    width: 100px;
+}
+
+.button--small {
+    height: 30px;
+    width: 60px;
+}
+
+.button--large {
+    width: 300px;
+}

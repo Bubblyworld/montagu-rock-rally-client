@@ -7,10 +7,7 @@ import InternalPage from './components/internal_pages/internal_page.js';
 export default class App extends React.Component {
     render() {
         return <div>
-            {/* Testing testing: */}
-            <Link to='/internal/profile'><button>Profile</button></Link>
-            <Link to='/internal/scoreboard'><button>Score</button></Link>
-            <Link to='/internal/send'><button>Send</button></Link>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
             <Switch>
                 <Route path='/internal' component={InternalPage}/>

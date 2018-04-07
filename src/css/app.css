@@ -2,11 +2,11 @@
 Global styling for the montagu rally app.
  */
 
- * {
-     margin: 0;
-     padding: 0;
- }
+* {
+    margin: 0;
+    padding: 0;
+}
 
- *, *:before, *:after {
-     box-sizing: border-box;
- }
+*, *:before, *:after {
+    box-sizing: border-box;
+}

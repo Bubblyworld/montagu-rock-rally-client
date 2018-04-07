@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+
+    background-color: #5f5b5a;
+    box-shadow: -2px 2px 8px 0px #73706f;
+    border-radius: 5px;
+}
+
+.form__block {
+    margin: 5px 0px;
+}
+
+.form__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-top: 20px;
+}

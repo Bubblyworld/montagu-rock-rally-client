@@ -2,8 +2,8 @@ import React from 'react';
 
 export default class Footer extends React.Component {
     render() {
-        return <footer className='footer'>
+        return <div className='footer'>
             I'm a footer.
-        </footer>
+        </div>;
     }
 }
