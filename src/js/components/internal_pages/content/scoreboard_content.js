@@ -6,6 +6,20 @@ import Field from '../../field.js';
 import Card from '../../card.js';
 
 export default class ScoreboardContent extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: 'scoreboard_dropdown',
+            defaultValue: 'open',
+            options: [
+                { label: 'Open', value: 'open' },
+                { label: 'U18 Boys', value: 'u18_boys' },
+                { label: 'U18 Girls', value: 'u18_girls' }
+            ]
+        };
+    }
+
     render() {
         return <div className='scoreboard-content'>
             <Card>
@@ -13,7 +27,7 @@ export default class ScoreboardContent extends React.Component {
                     <Field
                         className='field--40-60'
                         label={<span> Category: </span>}
-                        input={<DropDown/>}
+                        input={<DropDown {...this.state}/>}
                     />
                 </div>
 

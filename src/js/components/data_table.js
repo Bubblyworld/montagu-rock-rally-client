@@ -40,9 +40,17 @@ export class DataTable extends React.Component {
         return pages;
     }
 
+    // TODO: these keys are not unique, I just get annoyed by the warning.
+    keyify(rows) {
+        var index = 0;
+
+        return rows
+            .map(row => React.cloneElement(row, { key: index++ }));
+    }
+
     render() {
         return <div className='data-table'>
-            {this.pagify(this.getChildren(), 5)[0]}
+            {this.keyify(this.pagify(this.getChildren(), 5)[0])}
         </div>;
     }
 }

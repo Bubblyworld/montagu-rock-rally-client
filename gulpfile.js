@@ -3,11 +3,11 @@ var concat = require('gulp-concat');
 var source = require('vinyl-source-stream');
 var Browserify = require('browserify');
 
-var sourceFiles = ['./src/css/**/*.css', './src/js/**/*.js'];
+var sourceFiles = ['./vendor/*', './src/css/**/*.css', './src/js/**/*.js'];
 
 gulp.task('css', () => {
     gulp
-        .src('src/css/**/*.css')
+        .src(['src/css/**/*.css', 'vendor/*.css'])
         .pipe(concat('bundle.css'))
         .pipe(gulp.dest('build'));
 });
