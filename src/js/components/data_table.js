@@ -1,12 +1,8 @@
 import React from 'react';
 
-export class Row extends React.Component {
-    render() {
-        return <div className='data-table__row'>
-            {this.props.children}
-        </div>;
-    }
-}
+import cssWrapper from './css_wrapper.js';
+
+export var Row = cssWrapper('data-table__row');
 
 // Receives a list of row elements, each of which is a fixed height.
 export class DataTable extends React.Component {
@@ -41,7 +37,6 @@ export class DataTable extends React.Component {
         while(pages[pages.length - 1].length < numberPerPage)
             pages[pages.length - 1].push(<Row/>);
 
-            console.log(pages);
         return pages;
     }
 

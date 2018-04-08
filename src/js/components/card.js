@@ -1,9 +1,5 @@
 import React from 'react';
 
-export default class Card extends React.Component {
-    render() {
-        return <div className='card'>
-            {this.props.children}
-        </div>;
-    }
-}
+import cssWrapper from './css_wrapper.js';
+
+export default cssWrapper('card');

@@ -1,0 +1,11 @@
+.scoreboard-content {
+    width: 70%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.scoreboard-content__category {
+    width: 100%;
+
+    margin-bottom: 20px;
+}
