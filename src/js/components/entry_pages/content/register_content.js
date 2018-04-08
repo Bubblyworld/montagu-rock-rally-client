@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Button from '../../button.js';
-import Field from '../../field.js';
+import { Field, Label, Input } from '../../field.js';
 import { Form, Block, Footer } from '../../form.js';
 
 export default class RegisterContent extends React.Component {
@@ -10,17 +10,19 @@ export default class RegisterContent extends React.Component {
         return <div className='register-content'>
             <Form>
                 <Block>
-                    <Field
-                        className='field--40-60'
-                        label={<span> Name: </span>}
-                        input={<input type='text'/>}
-                    />
+                    <Field className='field--40-60'>
+                        <Label> Name: </Label>
+                        <Input>
+                            <input type='text'/>
+                        </Input>
+                    </Field>
 
-                    <Field
-                        className='field--40-60'
-                        label={<span> Email: </span>}
-                        input={<input type='email'/>}
-                    />
+                    <Field className='field--40-60'>
+                        <Label> Email: </Label>
+                        <Input>
+                            <input type='email'/>
+                        </Input>
+                    </Field>
                 </Block>
 
                 <Footer>
