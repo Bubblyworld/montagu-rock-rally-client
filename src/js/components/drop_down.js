@@ -7,8 +7,16 @@ export default class DropDown extends React.Component {
     constructor(props) {
         super(props);
 
+        var defaultOption = '';
+        if (props.defaultValue) {
+            props.options.forEach(option => {
+                if (option.value === props.defaultValue)
+                    defaultOption = option;
+            });
+        }
+
         this.state = {
-            selectedValue: props.defaultValue || ''
+            selectedValue: defaultOption
         }
     }
 
@@ -18,6 +26,7 @@ export default class DropDown extends React.Component {
 
     render() {
         var { selectedValue } = this.state;
+        console.log(selectedValue);
 
         return <div className='drop-down'>
             <Select

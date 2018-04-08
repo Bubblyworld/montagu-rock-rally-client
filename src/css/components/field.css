@@ -5,6 +5,12 @@
     width: 100%;
 }
 
+.field__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .field--40-60 .field__label, .field__label { flex: 40 40 0; }
 .field--40-60 .field__input, .field__input { flex: 60 60 0; }
 
