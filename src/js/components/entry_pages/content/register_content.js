@@ -26,10 +26,10 @@ export default class RegisterContent extends React.Component {
                 </Block>
 
                 <Footer>
-                    <Button className='button--small'>Register</Button>
+                    <Button className='button--small'> Register </Button>
 
                     <Link to='/'>
-                        <Button className='button--small'>Cancel</Button>
+                        <Button className='button--small'> Cancel </Button>
                     </Link>
                 </Footer>
             </Form>

@@ -1,0 +1,23 @@
+.radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 34px;
+    width: 100%;
+}
+
+.radio-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.radio-input__button {
+    margin: 0px 5px;
+}
+
+.radio-input__label {
+
+}
