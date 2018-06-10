@@ -26,6 +26,7 @@ export default class DropDown extends React.Component {
 
     render() {
         var { selectedValue } = this.state;
+        console.log(selectedValue);
 
         return <div className='drop-down'>
             <Select
