@@ -21,7 +21,7 @@ export default function cssWrapper(containerClass, childClass) {
                 contained = this.props.children ? this.renderChild(this.props.children) : null;
             }
 
-            return <div className={classname(containerClass, this.props.className)}>
+            return <div onClick={this.props.onClick} className={classname(containerClass, this.props.className)}>
                 {contained}
             </div>;
         }
